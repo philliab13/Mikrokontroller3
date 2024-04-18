@@ -7,17 +7,21 @@
 typedef struct {
 	// Tasks
 	volatile uint32_t TASKS_OUT[8];
+	volatile uint32_t RESERVED0[4];
+
 	volatile uint32_t TASKS_SET[8];
+	volatile uint32_t RESERVED5[4];
+
 	volatile uint32_t TASKS_CLR[8];
 
 	// Events
-	volatile uint32_t RESERVED0[60];
+	volatile uint32_t RESERVED10[32];
 	volatile uint32_t EVENTS_IN[8];
 
-	volatile uint32_t RESERVED1[27];
+	volatile uint32_t RESERVED1[23];
 	volatile uint32_t EVENTS_PORT;
 	// Registers
-	volatile uint32_t RESERVED2[96];
+	volatile uint32_t RESERVED2[97];
 	volatile uint32_t INTENSET;
 	volatile uint32_t INTENCLR;
 	volatile uint32_t RESERVED3[129];
